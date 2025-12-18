@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impulso Urbano - Promoción Spotify</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Fuente Inter y colores -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF; /* Fondo Blanco */
+        }
+        .text-accent {
+            color: #1DB954; /* Verde Spotify */
+        }
+        .bg-accent {
+            background-color: #1DB954; /* Verde Spotify */
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 15px #1DB954; /* Sombra Verde */
+            transform: translateY(-2px);
+        }
+        .card-bg {
+            background-color: #1a1a1a; /* Mantener oscuro para contraste en la sección */
+        }
+        /* ESTILO NUEVO: Fondo con imagen para la sección del reproductor */
+        .bg-music-pattern {
+            background-image: url('https://placehold.co/1200x500/121212/1DB954?text=Fondo+Musical+Urbano');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            /* Se añade un overlay oscuro para que el texto blanco sea legible */
+        }
+        .bg-music-pattern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Overlay oscuro semi-transparente */
+            z-index: 1;
+        }
+        .section-content {
+            position: relative;
+            z-index: 2; /* Asegura que el contenido esté sobre el overlay */
+        }
+    </style>
+</head>
+<body class="text-gray-900 min-h-screen">
+
+    <!-- Header / Navbar (Oscuro para contraste) -->
+    <header class="p-4 border-b border-gray-200 bg-gray-900">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-black tracking-widest text-white">IMPULSO URBANO</h1>
+            <a href="#contacto" class="hidden sm:inline-block text-sm font-semibold text-accent hover:text-white transition duration-200">
+                ¡Quiero Promocionar!
+            </a>
+        </div>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <main class="container mx-auto p-4 py-12 md:py-24">
+        <div class="text-center max-w-4xl mx-auto">
+            <span class="text-sm font-semibold uppercase tracking-widest text-accent mb-3 block">SPOTIFY CURATION POWER</span>
+            <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                Lleva tu <span class="text-accent">Reggaetón</span> al Próximo Nivel: <br class="hidden md:block">
+                ¡Exposición <span class="text-white bg-accent px-2 rounded-lg">Real</span> Ahora!
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
+                Somos tu puente directo con miles de oyentes latinos activos. Deja de luchar contra el algoritmo y empieza a sonar en la playlist correcta.
+            </p>
+            
+            <!-- Botón CTA principal -->
+            <a href="URL_DE_TU_GIG_EN_FIVERR" target="_blank" id="cta-hero" class="inline-block bg-accent text-white font-bold py-4 px-10 rounded-xl transition duration-300 btn-glow shadow-lg shadow-green-600/50 uppercase tracking-wider text-lg">
+                Quiero Impulsar Mi Carrera (Ver Paquetes en Fiverr)
+            </a>
+            <p class="mt-4 text-sm text-gray-500">Haz click para ver los paquetes de promoción.</p>
+        </div>
+    </main>
+
+    <!-- Sección de Reproductor y Previsualización (Fondo con Imagen Musical) -->
+    <section class="py-16 bg-music-pattern border-t border-b border-gray-200">
+        <div class="container mx-auto px-4 max-w-5xl section-content">
+            <h3 class="text-3xl font-bold text-center mb-10 text-white">Playlist Exclusiva: Sabor y Alcance Urbano</h3>
+            <div class="card-bg p-6 rounded-2xl shadow-2xl">
+                <!-- Iframe de Spotify para previsualización (Altura duplicada a 704px) -->
+                <iframe 
+                    data-testid="embed-iframe" 
+                    style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/playlist/3mNUsg6ag3xylbaYupnew1?utm_source=generator" 
+                    width="100%" 
+                    height="704" 
+                    frameBorder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                    title="Playlist de Reggaetón y Música Latina"
+                    class="shadow-xl"
+                ></iframe>
+                <!-- Nota sobre el contenido -->
+                <p class="text-center text-gray-400 mt-4 text-sm">
+                    Escucha el nivel de las canciones que curamos. Tu música podría ser la próxima en esta lista.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de Autoridad y Confianza -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Columna de Texto -->
+                <div>
+                    <span class="text-sm font-semibold uppercase tracking-widest text-accent mb-2 block">Crecimiento Comprobado</span>
+                    <h3 class="text-4xl font-extrabold mb-6">
+                        Autoridad y Confianza en la Escena Urbana
+                    </h3>
+                    <p class="text-gray-700 text-lg mb-8">
+                        Nuestro servicio se basa en la <strong>honestidad</strong> y los <strong>resultados reales</strong>. No usamos bots ni trucos. Solo promoción orgánica para que tu música sea descubierta por oyentes que realmente aman el género.
+                    </p>
+                    
+                    <!-- Respaldo de Clientes (Cifra actualizada a 20) -->
+                    <div class="card-bg p-6 rounded-xl border-l-4 border-accent shadow-xl">
+                        <p class="text-2xl font-bold text-accent mb-2">"Respaldo de Clientes Satisfechos"</p>
+                        <p class="text-gray-300">
+                           Más de <span class="font-bold text-white">20 artistas satisfechos</span> ya han visto cómo su música escala posiciones y llega a miles de nuevos oyentes orgánicos. Tu éxito es nuestra misión. ¡Estamos listos para hacerte sonar!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Columna de Beneficios (Mockup visual) -->
+                <div class="space-y-6">
+                    <div class="flex items-start p-4 card-bg rounded-xl shadow-lg">
+                        <svg class="w-6 h-6 text-accent mt-1 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        <div>
+                            <p class="font-bold text-white">Crecimiento Orgánico</p>
+                            <p class="text-gray-400 text-sm">Aumento de oyentes mensuales y seguidores de tu perfil de Spotify.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 card-bg rounded-xl shadow-lg">
+                        <svg class="w-6 h-6 text-accent mt-1 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v14c0 1.657-1.343 3-3 3H7c-1.657 0-3-1.343-3-3s1.343-3 3-3h4c.738 0 1.41.258 1.947.697M12 21c2.485 0 4.5-2.015 4.5-4.5S14.485 12 12 12 7.5 14.015 7.5 16.5 9.515 21 12 21zm0 0a9 9 0 01-9-9"></path></svg>
+                        <div>
+                            <p class="font-bold text-white">Posicionamiento en Algoritmo</p>
+                            <p class="text-gray-400 text-sm">Preparamos tu canción para que las listas algorítmicas de Spotify la noten.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 card-bg rounded-xl shadow-lg">
+                        <svg class="w-6 h-6 text-accent mt-1 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z"></path></svg>
+                        <div>
+                            <p class="font-bold text-white">Alcance Global Latino</p>
+                            <p class="text-gray-400 text-sm">Nuestra audiencia está concentrada en los principales mercados de Reggaetón.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / CTA Final (Oscuro para contraste) -->
+    <footer id="contacto" class="bg-gray-900 py-10 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-4 text-white">¿Listo para ser el próximo éxito?</h3>
+            <p class="text-gray-300 mb-8">No esperes a que te encuentren. Toma acción hoy mismo y asegura tu lugar en la cima.</p>
+            
+            <!-- Botón CTA final -->
+            <a href="URL_DE_TU_GIG_EN_FIVERR" target="_blank" class="inline-block bg-white text-accent font-bold py-3 px-8 rounded-xl transition duration-300 hover:bg-gray-200 shadow-xl uppercase tracking-wider text-md">
+                RESERVAR MI PROMOCIÓN EN FIVERR
+            </a>
+
+            <!-- Contacto/Redes Sociales (Instagram - Icono Blanco y Hover Verde) -->
+            <div class="flex justify-center items-center mt-6 mb-4">
+                <a href="https://www.instagram.com/fabianherrera.cl/" target="_blank" 
+                   class="text-white hover:text-accent transition duration-200 flex items-center">
+                    <!-- Instagram SVG Icon (Ahora es blanco por defecto para alto contraste) -->
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.76.01 3.705.056.945.045 1.55.195 2.05.385.505.19.925.43 1.33.835.405.4.645.825.835 1.33.19.5.34 1.105.385 2.05.046.945.056 1.275.056 3.705s-.01 2.76-.056 3.705c-.045.945-.195 1.55-.385 2.05-.19.505-.43.925-.835 1.33-.4.405-.825.645-1.33.835-.5.19-1.105.34-2.05.385-.945.046-1.275.056-3.705.056s-2.76-.01-3.705-.056c-.945-.045-1.55-.195-2.05-.385-.505-.19-.925-.43-1.33-.835-.405-.4-.645-.825-.835-1.33-.19-.5-.34-1.105-.385-2.05-.046-.945-.056-1.275-.056-3.705s.01-2.76.056-3.705c.045-.945.195-1.55.385-2.05.19-.505.43-.925.835-1.33.4-.405.825-.645 1.33-.835.5-.19 1.105-.34 2.05-.385.945-.046 1.275-.056 3.705-.056zM12.315 6c3.483 0 6.315 2.832 6.315 6.315s-2.832 6.315-6.315 6.315-6.315-2.832-6.315-6.315 2.832-6.315 6.315-6.315zM20.5 5.5c-.775 0-1.4.625-1.4 1.4s.625 1.4 1.4 1.4 1.4-.625 1.4-1.4-.625-1.4-1.4-1.4z" clip-rule="evenodd" />
+                    </svg>
+                    @fabianherrera.cl
+                </a>
+            </div>
+            
+            <p class="text-gray-500 mt-8 text-sm">
+                © 2025 Impulso Urbano. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
